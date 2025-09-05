@@ -16,6 +16,7 @@ print(name ?? "")
 
 // 2. Создай переменную age: Int? = nil. Если в age лежит число – выведи его. Если nil – выведи "Возраст не указан".
 var age: Int?
+
 if let age {
     print ("Возраст \(age)")
 } else {
@@ -64,10 +65,9 @@ var currentAge: Int?
 var city: String? = "Moscow"
 
 print("Имя: \(firstName ?? "Имя не указано")")
-
-
 print("Возраст: \(currentAge ?? 0)")
 print("Город: \(city ?? "Город не указан")")
+
 /*
  6. Задана переменая var score: Int? = 85
  С помощью if let выведи:
@@ -76,6 +76,7 @@ print("Город: \(city ?? "Город не указан")")
   - "Нужно подтянуть" – если score < 50
   - "Нет данных" – если nil.
  */
+
 var score: Int? = 85
 if let score {
     switch score {
@@ -113,6 +114,7 @@ if let numberString,  let number = Int(numberString) {
   - "День не распознан" для всех остальных чисел.
  */
 var day = 3
+
 switch day {
 case 1:
     print("Понедельник")
