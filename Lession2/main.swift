@@ -147,3 +147,53 @@ default:
     print("Неизвестный цвет")
 }
 
+/*
+ 1 -
+ var numberString: String? = "123"
+ С помощью if let попробуй преобразовать её в Int.
+ Если получилось — выведи "Число: 123".
+ Если не получилось — выведи "Не удалось преобразовать".
+*/
+var secondNumberString: String? = "123"
+if let secondNumberString, let secondNumberString = Int(secondNumberString) {
+    print("Число: \(secondNumberString)")
+} else {
+    print("Не удалось преобразовать")
+}
+
+/*
+ 2 -
+ var username: String? = "Alice"
+ var password: String? = nil
+ С помощью optional binding (if let name = username, let pass = password) выведи:
+
+ "Добро пожаловать, Alice!", если и имя, и пароль есть.
+
+ "Введите имя и пароль", если чего-то нет.
+*/
+
+var username: String? = "Alice"
+var password: String? = nil
+
+if let username, let password {
+    print("Добро пожаловать, \(username)!")
+} else {
+    print("Введите имя и пароль")
+}
+/*
+ 3-
+ var name: String? = "Bob"
+ var email: String? = nil
+ var country: String? = "Kazakhstan"
+ С помощью if let выведи "Профиль: <name>, <email>, <country>", если все три значения есть.
+ Иначе выведи "Заполните все поля".
+ */
+var userName: String? = "Bob"
+var firstEmail: String? = nil
+var country: String? = "Kazakhstan"
+
+if let userName, let firstEmail, let country {
+    print("Профиль: \(userName), \(firstEmail), \(country)")
+} else {
+    print("Заполните все поля")
+}
