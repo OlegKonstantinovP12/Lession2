@@ -60,11 +60,11 @@ if let email {
  - "Город: <city>" если он есть, иначе "Город не указан"
  */
 
-var firstName: String? = "Oleg"
+name = "Oleg"
 var currentAge: Int?
 var city: String? = "Moscow"
 
-print("Имя: \(firstName ?? "Имя не указано")")
+print("Имя: \(name ?? "Имя не указано")")
 print("Возраст: \(currentAge ?? 0)")
 print("Город: \(city ?? "Город не указан")")
 
