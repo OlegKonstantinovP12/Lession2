@@ -147,6 +147,7 @@ default:
     print("Неизвестный цвет")
 }
 
+// Дополнительное задание 1
 /*
  1 -
  var numberString: String? = "123"
@@ -196,4 +197,104 @@ if let userName, let firstEmail, let country {
     print("Профиль: \(userName), \(firstEmail), \(country)")
 } else {
     print("Заполните все поля")
+}
+
+// Дополнительное задание 2
+
+/*
+ //1
+ var firstName: String? = "John"
+ var lastName: String? = nil
+ С помощью if let проверь:
+
+ Если обе строки есть — выведи "Полное имя: John ...".
+
+ Если хотя бы одной нет — выведи "Данных недостаточно".
+*/
+
+var firstName: String? = "John"
+var lastName: String? = nil
+
+if let firstName, let lastName {
+    print("Полное имя: \(firstName) \(lastName)")
+} else {
+    print("Данных не достаточно")
+}
+
+/*
+ //2
+ var price: Double? = 200
+ var discountPercent: Double? = 10
+ С помощью if let вычисли итоговую цену:
+ finalPrice = price - (price * discountPercent / 100)
+ Выведи "Цена со скидкой: ...".
+ Если данных нет — выведи "Ошибка".
+*/
+
+var price: Double? = 200
+var discountPercent: Double? = 10
+
+if let price, let discountPercent {
+    let finalPrice = price - (price * discountPercent / 100)
+    print("Цена со скидкой: \(finalPrice)")
+} else {
+    print("Ошибка")
+}
+/*
+ //3
+ var meters: Double? = 1200
+ С помощью if let преобразуй метры в километры (/ 1000) и выведи "1.2 км".
+ Если nil — выведи "Нет данных".
+*/
+var meters: Double? = 1200
+
+if let meters {
+    print("\(meters / 1000) км")
+} else {
+    print("Нет данных")
+}
+/*
+ //4
+ var first: Int? = 15
+ var second: Int? = 20
+ С помощью if let выведи:
+
+ "Первое больше"
+
+ "Второе больше"
+
+ "Равны"
+ Если хотя бы одно nil — выведи "Сравнение невозможно".
+ */
+var first: Int? = 15
+var second: Int? = 20
+
+// Я выбрал проверку через switch - case, так как для меня он выглядит более лаконично и читабельно
+if let first, let second {
+    switch first {
+    case first where first > second :
+        print("Первое больше")
+    case first where first < second:
+        print("Второе больше")
+    case first where first == second:
+        print("Равны")
+    default:
+        break
+    }
+} else {
+    print("Сравнение не возможно")
+}
+
+// Также прикладываю выполнение через if-else
+
+if let first, let second {
+    if first > second {
+        print("Первое больше")
+    } else if first < second {
+        print("Второе больше")
+    } else {
+        print("Равны")
+    }
+} else {
+    print("Сравнение не возможно")
 }
