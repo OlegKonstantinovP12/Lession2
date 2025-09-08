@@ -175,8 +175,8 @@ if let secondNumberString, let secondNumberString = Int(secondNumberString) {
 var username: String? = "Alice"
 var password: String? = nil
 
-if let username, let password {
-    print("Добро пожаловать, \(username)!")
+if let name = username, let _ = password {
+    print("Добро пожаловать, \(name)!")
 } else {
     print("Введите имя и пароль")
 }
